@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour {
 	}
 
 	public void QuiteGame() {
-		#if UNITY_ANDROID && !UNITY_EDITOR
+		#if UNITY_ANDROID && !UNITY_EDITOR && OVR
 		// show the platform UI
 		OVRPluginEvent.Issue(RenderEventType.PlatformUIConfirmQuit);
 		#endif
@@ -119,7 +119,7 @@ public class Menu : MonoBehaviour {
 		if (elapsedTime >= longPressDelay) {
 			homeButtonDownTime = 0f;
 			Debug.Log("Open the platform UI");
-			#if UNITY_ANDROID && !UNITY_EDITOR
+			#if UNITY_ANDROID && !UNITY_EDITOR && OVR
 			// Show the platform UI
 			OVRPluginEvent.Issue(RenderEventType.PlatformUI);
 			#endif

@@ -12,11 +12,7 @@ public class King : SingletonComponent<King> {
 
 	public static bool isInVRMode {
 		get {
-			#if UNITY_EDITOR || UNITY_STANDALONE
-			return false;
-			#endif
-			
-			return true;
+            return false;
 		}
 	}
 
