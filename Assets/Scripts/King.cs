@@ -117,7 +117,7 @@ public class King : SingletonComponent<King> {
 			AudioListener.volume = value;
 		}, 0f, 1f, 1f);
 
-		yield return new WaitForSeconds(35f);
+		yield return new WaitForSeconds(10f);
 
 		King.visitor.sight.enabled = true;
 	}
