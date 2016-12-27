@@ -44,10 +44,12 @@ public class Sight : MonoBehaviour {
 	}
 	
 	void HandleTouchHandler (object sender, System.EventArgs e) {
-		OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
+#if OVR
+        OVRTouchpad.TouchArgs touchArgs = (OVRTouchpad.TouchArgs)e;
 		if(touchArgs.TouchType == OVRTouchpad.TouchEvent.SingleTap) {
 			focusOnTargetWithoutInterruptionSec = 999f;
 		}
+#endif
 	}
 
 	void UpdateReticle() {

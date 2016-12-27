@@ -51,8 +51,10 @@ public class Visitor : MonoBehaviour {
 				vrCameraRig.gameObject.SetActive(true);
 			
 			sight.anchor = vrCenterOfView;
-			cameras.Add(vrCameraRig.GetComponent<OVRCameraRig>().leftEyeCamera);
+#if OVR
+            cameras.Add(vrCameraRig.GetComponent<OVRCameraRig>().leftEyeCamera);
 			cameras.Add(vrCameraRig.GetComponent<OVRCameraRig>().rightEyeCamera);
+#endif
 		} 
 		// Regular mode.
 		else {
@@ -95,11 +97,11 @@ public class Visitor : MonoBehaviour {
 		CheckObjects();
 		//prevPosition = transform.position;
 
-		#if UNITY_STANDALONE
+#if UNITY_STANDALONE
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			StartCoroutine(RunDemoClosingCo());
 		}
-		#endif
+#endif
 	}
 
 	IEnumerator RunDemoClosingCo() {
