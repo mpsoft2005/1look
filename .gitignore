@@ -6,6 +6,7 @@
 [Oo]bj/
 [Bb]uild/
 [Ss]creenshots/
+*.apk
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #

@@ -12,7 +12,7 @@ public class King : SingletonComponent<King> {
 
 	public static bool isInVRMode {
 		get {
-            return false;
+            return true;
 		}
 	}
 
