@@ -30,6 +30,7 @@ public class ScreenFader : MonoBehaviour {
 	*/
 
 	public void FadeToInSec(float alpha, float seconds) {
+        Debug.LogFormat("fade to alpha {0}, in {1} seconds", alpha, seconds);
 		//StartCoroutine(FadeToInSecCo(alpha, seconds));
 
 		blinkPlane.gameObject.SetActive(true);
